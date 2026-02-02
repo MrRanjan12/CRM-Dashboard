@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CRM Dashboard (Customers Module) 🚀
 
-## Getting Started
+A modern **CRM Customers Dashboard UI** built using **Next.js (App Router)** with **TypeScript**, **Tailwind CSS**, **Redux Toolkit**, and **TanStack Query**.
 
-First, run the development server:
+This project contains a complete customer listing screen with:
+✅ Sidebar + Topbar layout  
+✅ Customers header + Tabs  
+✅ Filters toolbar with Apply/Reset  
+✅ Customers Table + Status Dropdown  
+✅ Export to CSV + Import CSV  
+✅ Console logs for all actions (as required in task)
 
+---
+
+## ✨ Tech Stack
+
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Redux Toolkit** (Global state: filters + customers)
+- **TanStack Query** (API fetch + caching)
+- **Lucide Icons** (icons)
+- **Mock API Route** (`/api/customers`)
+
+---
+
+## ✅ Features Implemented
+
+### ✅ 1. Dashboard Layout
+- Sidebar navigation
+- Topbar search + profile section
+
+### ✅ 2. Customers Page UI
+- Customers heading
+- Tabs:
+  - All
+  - New
+  - Return
+  - In-progress
+  - Purchased
+
+### ✅ 3. Filter Toolbar
+Filters available:
+- Category
+- Subcategory
+- Brand
+- Product
+- Search Type
+- Search input
+
+Buttons:
+- Apply filter ✅
+- Reset filter ✅
+
+### ✅ 4. Customers Table
+- Customer listing table with:
+  - Avatar
+  - Name
+  - Contact
+  - Email
+  - Gender
+  - Brand
+  - Product
+  - Tier
+  - Status (dropdown update)
+
+### ✅ 5. Export / Import
+- **Export data** → downloads CSV file (`customers.csv`)
+- **Import data** → upload CSV file and append in table
+
+### ✅ 6. Logging (Task Requirement)
+Every action prints logs:
+- Export clicked
+- Import clicked
+- Tab changed
+- Apply filter
+- Reset filter
+- Status update
+
+---
+
+## 📂 Project Structure (Important Files)
+
+app/
+page.tsx # Customers page UI
+api/customers/route.ts # Mock API data provider
+
+components/
+Sidebar.tsx
+Topbar.tsx
+CustomersHeader.tsx
+CustomersToolbar.tsx
+CustomersTable.tsx
+
+store/
+store.ts
+hooks.ts
+filtersSlice.ts
+customersSlice.ts
+uiSlice.ts (optional for column toggle)
+
+
+---
+
+## 🔥 Getting Started
+
+### 1️⃣ Install dependencies
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
