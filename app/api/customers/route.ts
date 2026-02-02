@@ -1,0 +1,68 @@
+import { NextResponse } from "next/server";
+
+export async function GET() {
+  const data = [
+    {
+      id: 1,
+      name: "Arjun Mehta",
+      customerName: "Kavya Nair",
+      phone: "9765432109",
+      email: "arjun@gmail.com",
+      gender: "Male",
+      brand: "Averiq",
+      product: "Product2",
+      tier: "Premium",
+      status: "New",
+      category: "Category 1",
+      subcategory: "Sub 1",
+      avatar: "/avatar.png",
+    },
+    {
+      id: 2,
+      name: "Priya Sharma",
+      customerName: "Meera Patel",
+      phone: "9988776605",
+      email: "priya@gmail.com",
+      gender: "Female",
+      brand: "Lumetra",
+      product: "Product3",
+      tier: "Silver",
+      status: "Return",
+      category: "Category 2",
+      subcategory: "Sub 2",
+      avatar: "/avatar.png",
+    },
+    {
+      id: 3,
+      name: "Rohan Patel",
+      customerName: "Aarav Shah",
+      phone: "9876543210",
+      email: "rohan@gmail.com",
+      gender: "Male",
+      brand: "Ventrova",
+      product: "Product1",
+      tier: "Gold",
+      status: "In-progress",
+      category: "Category 1",
+      subcategory: "Sub 2",
+      avatar: "/avatar.png",
+    },
+    {
+      id: 4,
+      name: "Neha Verma",
+      customerName: "Ishita Roy",
+      phone: "9123456780",
+      email: "neha@gmail.com",
+      gender: "Female",
+      brand: "Averiq",
+      product: "Product1",
+      tier: "Browns",
+      status: "Purchased",
+      category: "Category 2",
+      subcategory: "Sub 1",
+      avatar: "/avatar.png",
+    },
+  ];
+
+  return NextResponse.json(data);
+}
