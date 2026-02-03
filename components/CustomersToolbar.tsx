@@ -246,7 +246,7 @@ export default function CustomersToolbar() {
 
           <button
             onClick={() => console.log("Add product clicked")}
-            className="h-10 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2 text-sm font-medium"
+            className="h-10 px-4 rounded-xl bg-blue-700 hover:bg-blue-800 text-white flex items-center gap-2 text-sm font-medium"
           >
             <Plus size={16} />
             Add product
